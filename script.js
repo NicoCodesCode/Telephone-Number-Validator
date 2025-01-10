@@ -1,9 +1,10 @@
+const phoneNumberInput = document.getElementById("user-input");
 const checkButton = document.getElementById("check-btn");
 const clearButton = document.getElementById("clear-btn");
 const result = document.getElementById("results-div");
 
 checkButton.addEventListener("click", () => {
-  const phoneNumber = document.getElementById("user-input").value;
+  const phoneNumber = phoneNumberInput.value;
 
   if (!phoneNumber) {
     alert("Please provide a phone number");
@@ -13,6 +14,7 @@ checkButton.addEventListener("click", () => {
 });
 
 clearButton.addEventListener("click", () => {
+  phoneNumberInput.value = "";
   result.textContent = "";
 });
 
